@@ -1,0 +1,149 @@
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body {
+    margin: 0;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    text-transform: lowercase;
+    padding-bottom: 1em;
+}
+
+img {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.about p {
+    padding: 1em;
+}
+
+.project p {
+    padding: 1em;
+}
+
+.contact p {
+    padding: 1em;
+}
+
+/*--------------------------------------------------------------
+Header:
+--------------------------------------------------------------*/
+
+header {
+    text-align: center;
+    background-color: darkslategray;
+    color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/*--------------------------------------------------------------
+Navigation:
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+Cards: MAIN
+--------------------------------------------------------------*/
+.main-content {
+    display: grid;
+    grid-template-columns: 50vw, 50vw;
+    grid-template-rows: 3fr, 2fr, 3fr, 1fr, 1fr;
+    grid-template-areas:
+        "about about"
+        "skills skills"
+        "projects projects"
+        "contact social-links"
+        "community resources";  
+}
+
+.about {
+    grid-area: about;
+    background-color: maroon;
+}
+.skills {
+    grid-area: skills;
+    background-color: blanchedalmond;
+}
+.projects {
+    grid-area: projects;
+    background-color: darkred;
+}
+.contact {
+    grid-area: contact;
+    background-color: cornsilk;
+}
+.social-links {
+    grid-area: social-links;
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr;
+    background-color: darkgoldenrod;
+    align-items: center;
+    justify-content: center;
+}
+.community {
+    grid-area: community;
+    background-color: darkmagenta;
+}
+.resources {
+    grid-area: resources;
+    background-color: darkslateblue;
+    max-width: 50vw;
+
+}
+
+/*--------------------------------------------------------------
+Footer:
+--------------------------------------------------------------*/
+footer {
+    text-align: center;
+    background-color: darkslategray;
+    color: beige;
+}
+
+footer p {
+    margin: 0;
+    padding: 1em;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for wider screens, when browser supports grid:
+--------------------------------------------------------------*/
+@supports (grid-area: auto) {
+
+
+    @media screen and (min-width: 500px) {
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "about about skills"
+                "social-links projects projects"
+                "contact community resources";
+        }
+    }
+
+    @media (min-width: 800px) {
+        .main-content {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto;
+        }
+    }
+}
