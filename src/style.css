@@ -80,10 +80,16 @@ Cards: MAIN
     grid-area: about;
     background-color: maroon;
 }
+
+.about p {
+    padding: 1em;
+}
+
 .skills {
     grid-area: skills;
     background-color: #290722;
 }
+
 .projects {
     grid-area: projects;
     background-color: #D8C398;
@@ -181,7 +187,7 @@ CSS Grid layout for wider screens, when browser supports grid:
         }
     }
 
-    @media (min-width: 800px) {
+    @media screen and (min-width: 800px) {
         h1 {
             font-size: 5em;
         }
@@ -200,6 +206,22 @@ CSS Grid layout for wider screens, when browser supports grid:
 
         img {
             max-width: 25vw;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        body {
+            max-width: 1000px;
+            background-color: #151018; 
+            margin: 0 auto;
+        }
+        header, footer {
+            background-color: #D8C398;
+            color: #290722;
+        }
+
+        .header h3 {
+            color: #290722;
         }
     }
 }
