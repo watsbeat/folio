@@ -144,6 +144,11 @@ Cards: MAIN
     max-width: 50vw;
 }
 
+.resources p {
+    margin: 0;
+    padding: 1em;
+}
+
 .resources a {
     display: inline-block;
     border: solid ;
