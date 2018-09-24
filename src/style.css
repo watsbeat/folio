@@ -22,10 +22,25 @@ a {
     color: #D8C398;
 }
 
+a:hover {
+    background-color: #151018;
+}
+
+.projects a:hover, a:focus {
+    background-color: maroon;
+    color: #D8C398;
+    border: none;
+}
+
 img {
     display: block;
     max-width: 200px;
     margin: 1em auto;
+}
+
+img:hover {
+    border-radius: 50%;
+    transition: all 0.8s;
 }
 
 .projects p {
