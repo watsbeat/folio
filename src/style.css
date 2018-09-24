@@ -25,19 +25,21 @@ a {
 img {
     display: block;
     max-width: 200px;
-    margin: 0 auto;
+    margin: 1em auto;
 }
 
-.about p {
+.projects p {
     padding: 1em;
-}
-
-.project p {
-    padding: 1em;
+    margin: 0;
 }
 
 .contact p {
     padding: 1em;
+    margin: 0;
+}
+
+h3 {
+    margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -90,21 +92,40 @@ Cards: MAIN
 
 .projects a {
     color: #290722;
+    display: inline-block;
+    border: solid #290722 1.5px;
+    margin-bottom: 1em;
+    padding: 0.5em;
 }
 
 .contact {
     grid-area: contact;
     background-color: maroon;
 }
+
+.contact a {
+    color: #D8C398;
+    display: inline-block;
+    border: solid #D8C398 1.5px;
+    margin-bottom: 1em;
+    padding: 0.5em; 
+}
 .social-links {
     grid-area: social-links;
-    display: grid;
-    grid-template-rows: 1fr, 1fr, 1fr;
+    display: flex;
+    flex-direction: column;
     background-color: #290722;
     color: #D8C398;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
+
+.social-links a {
+    border: solid;
+    padding: 0.5em;
+    margin: 1em;
+    
+}
+
 .community {
     grid-area: community;
     background-color: #D8C398;
@@ -115,7 +136,13 @@ Cards: MAIN
     background-color: maroon;
     color: #D8C398;
     max-width: 50vw;
+}
 
+.resources a {
+    display: inline-block;
+    border: solid ;
+    padding: 0.5em;
+    margin: 1em;
 }
 
 /*--------------------------------------------------------------
@@ -129,7 +156,7 @@ footer {
 
 footer p {
     margin: 0;
-    padding: 1em;
+    padding: 2em;
 }
 
 /*--------------------------------------------------------------
