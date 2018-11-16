@@ -22,14 +22,8 @@ a {
     color: #D8C398;
 }
 
-a:hover {
-    background-color: #151018;
-}
-
-.projects a:hover, a:focus {
+a:hover, a:focus {
     background-color: maroon;
-    color: #D8C398;
-    border: none;
 }
 
 img {
@@ -39,8 +33,9 @@ img {
 }
 
 img:hover {
-    border-radius: 50%;
-    transition: all 0.8s;
+    /* border-radius: 50%;
+    transition: all 0.8s; */
+    opacity: 0.5;
 }
 
 .projects p {
@@ -68,8 +63,10 @@ Header:
 header {
     text-align: center;
     background-color: #151018;
-    background-image: url('../img/jungle-life-in-refugee-camp.jpg');
-    background-size: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/jungle-life-in-refugee-camp.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: #D8C398;
     display: flex;
     flex-direction: column;
@@ -99,7 +96,8 @@ Cards: MAIN
 
 .about {
     grid-area: about;
-    background-color: maroon;
+    background-color: #290722;
+    color: #D8C398;
 }
 
 .about p {
@@ -108,26 +106,27 @@ Cards: MAIN
 
 .skills {
     grid-area: skills;
-    background-color: #290722;
+    background-color: #D8C398;
+    color: #151018;
 }
 
 .projects {
     grid-area: projects;
-    background-color: #D8C398;
-    color: #290722;
+    background-color: #151018;
+    color:#D8C398;
 }
 
 .projects a {
-    color: #290722;
+    color: #D8C398;
     display: inline-block;
-    border: solid #290722 1.5px;
+    border: solid #D8C398 1.5px;
     margin-bottom: 1em;
     padding: 0.5em;
 }
 
 .contact {
     grid-area: contact;
-    background-color: maroon;
+    background-color: #290722;
 }
 
 .contact a {
@@ -141,16 +140,16 @@ Cards: MAIN
     grid-area: social-links;
     display: flex;
     flex-direction: column;
-    background-color: #290722;
-    color: #D8C398;
+    background-color: #D8C398;
+    color: #151018;
     justify-content: space-evenly;
 }
 
 .social-links a {
-    border: solid;
+    border: solid  #151018 1.5px;
     padding: 0.5em;
     margin: 1em;
-    
+    color: #151018;    
 }
 
 .community {
@@ -160,7 +159,7 @@ Cards: MAIN
 }
 .resources {
     grid-area: resources;
-    background-color: maroon;
+    background-color: #290722;
     color: #D8C398;
     max-width: 50vw;
 }
@@ -198,10 +197,6 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 
     @media screen and (min-width: 500px) {
-        header {
-            background-image: url('../img/jungle-life-in-refugee-camp.jpg');
-            background-size: 500px;
-        }
         .main-content {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -218,12 +213,12 @@ CSS Grid layout for wider screens, when browser supports grid:
     }
 
     @media screen and (min-width: 800px) {
-        header {
-            background-image: url('../img/jungle-life-in-refugee-camp.jpg');
-            background-size: 800px;
-        }
         h1 {
             font-size: 5em;
+        }
+
+        .developer {
+            font-size: 2.5em;
         }
 
         em {
@@ -244,16 +239,12 @@ CSS Grid layout for wider screens, when browser supports grid:
     }
 
     @media screen and (min-width: 1200px) {
-        header {
-            background-image: url('../img/jungle-life-in-refugee-camp.jpg');
-            background-size: 1200px;
-        }
         body {
             max-width: 1000px;
             background-color: #151018; 
             margin: 0 auto;
         }
-        header, footer {
+        footer {
             background-color: #D8C398;
             color: #290722;
         }
