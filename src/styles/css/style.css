@@ -52,8 +52,13 @@ h3 {
     margin-bottom: 0;
 }
 
-.header h3 {
-    padding-bottom: 1em;
+#name {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.developer {
+    margin-bottom: 2em;
 }
 
 /*--------------------------------------------------------------
