@@ -223,7 +223,7 @@ CSS Grid layout for wider screens, when browser supports grid:
         }
 
         .developer {
-            font-size: 2.5em;
+            font-size: 2em;
         }
 
         em {
@@ -253,9 +253,11 @@ CSS Grid layout for wider screens, when browser supports grid:
             background-color: #D8C398;
             color: #290722;
         }
-
         .header h3 {
             color: #290722;
+        }
+        .developer {
+            font-size: 2.5em;
         }
     }
 }
